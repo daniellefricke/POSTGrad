@@ -1,14 +1,7 @@
+<h1><%= @post.title %></h1>
+<h2>Author: <%=@post.author%></h2>
+<h3><%=@post.content%></h3>
 
-<div class="container">
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
-
-
-
-
-
-
-
-
+<p><%= link_to "Edit this Post", edit_school_post_path(@school, @post)%></p>
 
 </div>

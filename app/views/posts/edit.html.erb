@@ -1,2 +1,19 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<h1>Edit This Post</h1>
+
+<%= form_for [@school, @post] do |f|%>
+
+  <%=f.label :name %>
+  <%=f.text_field :author %>
+
+  <%=f.label :title %>
+  <%=f.text_field :title %>
+
+  <%=f.label :content %>
+  <%=f.text_field :content %>
+
+  <%= f.submit "Create"%>
+<%end%>
+
+<%= form_for [@school, @post], method: :delete do |f| %>
+  <%= f.submit "Delete this Post!", class: "delete" %>
+<% end %>
