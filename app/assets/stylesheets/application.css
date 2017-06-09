@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: url("quad.jpg");
+  background-size: 100%;
+}
+
+h1 {
+  font-family: 'Graduate', cursive;
+  text-align: center;
+  color: red;
+  font-size: 80px;
+  padding: 0px;
+}
+
+div {
+  background-color: rgba(255, 255, 255, .9);
+  height: 500px;
+
+}

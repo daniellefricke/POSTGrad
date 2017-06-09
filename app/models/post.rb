@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
   belong_to :school
-  have_many :comments
+  has_many :comments
 end
