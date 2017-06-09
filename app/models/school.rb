@@ -1,3 +1,3 @@
 class School < ApplicationRecord
-  have_many: posts
+  have_many :posts
 end
