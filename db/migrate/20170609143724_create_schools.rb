@@ -7,7 +7,6 @@ class CreateSchools < ActiveRecord::Migration[5.1]
       t.string :url
       t.string :img_url
 
-      t.timestamps
     end
   end
 end
