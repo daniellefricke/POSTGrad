@@ -41,5 +41,5 @@ end
 
 private
   def post_params
-    params.require(:post).permit(:commentor, :text)
+    params.require(:post).permit(:author, :title, :content)
   end
