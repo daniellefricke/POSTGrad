@@ -15,13 +15,13 @@ class SchoolsController < ApplicationController
 
   def edit
       @school = School.find(params[:id])
-    end
+  end
 
-    def update
-          @school = School.find(params[:id])
-          @school.update(school_params)
-          redirect_to school_path(@school)
-        end
+  def update
+      @school = School.find(params[:id])
+      @school.update(school_params)
+        redirect_to school_path(@school)
+  end
 
   def show
     @school = School.find(params[:id])
@@ -31,7 +31,7 @@ class SchoolsController < ApplicationController
           @school = School.find(params[:id])
           @school.destroy
           redirect_to schools_path
-        end
+  end
 end
 
 private

@@ -7,6 +7,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :timestamp
 
       t.timestamps
+      t.references :school, null: false, index:true
     end
   end
 end

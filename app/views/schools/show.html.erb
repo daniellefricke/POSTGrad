@@ -1,0 +1,12 @@
+
+
+<h2><%= @school.name %></h2>
+<h3><%=image_tag (@school.img_url)%></h3>
+<p><%= link_to "Add a Post!", new_school_post_path(@school)%>
+
+<% @school.posts.each do |post| %>
+  <div class="posts">
+    <h2><%=link_to post.title, school_post_path(@school, post) %></h2>
+    <p><%=post.content%>
+    <%end%>
+  </div>

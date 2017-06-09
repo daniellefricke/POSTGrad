@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170609143837) do
     t.string "timestamp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "school_id", null: false
+    t.index ["school_id"], name: "index_posts_on_school_id"
   end
 
   create_table "schools", force: :cascade do |t|
