@@ -12,7 +12,9 @@ class CommentsController < ApplicationController
   def create
     @school = School.find(params[:school_id])
     @post = Post.find(params[:post_id])
-    @comment = @school.post.comment.create!(comment_params)
+    @comment = @post.comments.create!(comment_params)
+
+    redirect_to school_post_path(@school, @post)
   end
 
   def show
