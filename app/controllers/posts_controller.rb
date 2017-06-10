@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   def create
     @school = School.find(params[:school_id])
     @post = @school.posts.create!(post_params)
+
+    redirect_to school_path(@school, @posts)
   end
 
   def show
