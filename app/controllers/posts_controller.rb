@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @school = School.find(params[:school_id])
-    @post = @school.post.create!(post_params)
+    @post = @school.posts.create!(post_params)
   end
 
   def show
