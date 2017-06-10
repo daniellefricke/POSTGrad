@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,16 +17,21 @@
       <%= link_to "Home", schools_path%>
       <% if !current_user %>
         <%= link_to "Sign Up", new_user_registration_path %>
+        <%= link_to "Login", new_user_session_path %>
         <%else%>
         <%= link_to "Log Out", destroy_user_session_path %>
         <% end %>
+
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-    <h1>POST Grad</h1>
-    <h2>The Alumni Connection</h2>
+    <div class="jumbotron">
+        <h1>POST Grad</h1>
+        <h2>The Alumni Connection</h2>
+        <!-- add a drop down to search by state -->
+    </div>
 
     <%= yield %>
   </body>

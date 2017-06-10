@@ -9,31 +9,29 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ nav{
+   text-align: left;
+ }
 
 body {
-  /*background-image: url("quad.jpg");*/
+  background-image: url("quad.jpg");
   background-size: 100%;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
-h1 {
+.jumbotron {
+  background-color: blue;
+}
+
+.jumbotron h1{
   font-family: 'Graduate', cursive;
-  text-align: center;
-  color: red;
-  font-size: 80px;
-  padding: 0px;
 }
-
-h2{
-  text-align: center;
-  font-family: helvetica, sans-serif;
-}
-
 .school {
   display: inline-block;
 }
@@ -41,4 +39,10 @@ h2{
 .school img{
   height: 200px;
   width: 200px;
+}
+
+.well {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
 }
