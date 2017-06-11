@@ -19,18 +19,13 @@
  }
 
 body {
-  background-image: url("quad.jpg");
   background-size: 100%;
   text-align: center;
   font-family: Arial, sans-serif;
 }
+.hero{
+  background-image: url("quad.jpg");
 
-.jumbotron {
-  background-color: blue;
-}
-
-.jumbotron h1{
-  font-family: 'Graduate', cursive;
 }
 .school {
   display: inline-block;

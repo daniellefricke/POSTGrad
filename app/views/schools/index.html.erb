@@ -1,11 +1,23 @@
-<% @schools.each do |school| %>
-<div class="col-lg-3 col-med-3 col-sm-6 col-xs-6">
-  <div class="school">
+ <!-- <% @schools.each do |school| %>
+ <div class="col-lg-3 col-med-3 col-sm-6 col-xs-6">
+   <div class="school">
     <h2><%=link_to school.name, school_path(school)%></h2>
+     <img src="<%= school.img_url %>"/>
+  </div>
+  </div>
+ <% end %>
+</div> -->
 
-    <img src="<%= school.img_url %>"/>
+<section class="hero">
+  <div class="container">
 
   </div>
-</div>
-<% end %>
-</div>
+</section>
+
+
+<select onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
+  <option>Select A College/University</option>
+    <% @schools.each do |school| %>
+  <option value="<%= school_path(school) %>"><%= school.name %></option>
+    <% end %>
+</select>
