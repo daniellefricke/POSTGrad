@@ -2,11 +2,13 @@
 
 <%= form_for [@school, @post, @comment] do |f|%>
 
-  <%=f.label :name %>
+  <%=f.label :name %><br>
   <%=f.text_field :commentor %>
 
-  <%=f.label :comment %>
-  <%=f.text_field :text %>
+  <div class="container">
+  <%=f.label :comment %><br>
+  <%=f.text_area :text, size: "50x10" %>
+  </div>
 
   <%= f.submit "Create"%>
 <%end%>
