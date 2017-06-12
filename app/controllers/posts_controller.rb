@@ -7,12 +7,12 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @school = School.find(params[:school_id])
-    @post = current_user.posts.build
+    @post = Post.new
   end
 
   def create
     @school = School.find(params[:school_id])
-    @post = @school.posts.create!(post_params)
+    @post = @school.posts.create!(post_params.merge(user: current_user))
 
     redirect_to school_path(@school, @posts)
   end
@@ -36,10 +36,14 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def destroy
-    @school = school.find(params[:school_id])
+    @school = School.find(params[:school_id])
     @post =  Post.find(params[:id])
-    @post.destroy
-    rediret_to school_path(@school)
+    if @post.user == current_user
+      @post.destroy
+    else
+      flash[:alert] = "Only the author of this post can delete."
+    end
+    redirect_to school_path(@school)
   end
 end
 
