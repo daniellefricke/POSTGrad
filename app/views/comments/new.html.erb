@@ -2,9 +2,6 @@
 
 <%= form_for [@school, @post, @comment] do |f|%>
 
-  <%=f.label :name %><br>
-  <%=f.text_field :commentor %>
-
   <div class="container">
   <%=f.label :comment %><br>
   <%=f.text_area :text, size: "50x10" %>

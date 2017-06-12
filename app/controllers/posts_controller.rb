@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: desc)
   end
 
   def new
@@ -39,7 +39,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @school = School.find(params[:school_id])
     @post =  Post.find(params[:id])
     if @post.user == current_user
-      @post.destroy
+       @post.destroy
     else
       flash[:alert] = "Only the author of this post can delete."
     end

@@ -9,10 +9,10 @@
 <div class="container">
   <div class="row">
           <div class="col-lg-4">
-            <% @school.posts.each do |post| %>
+            <% @school.posts.order(created_at: :DESC).each do |post| %>
             <h2 class="post-titl"><%=link_to post.title, school_post_path(@school, post) %></h2>
-            <p>Author: <%=post.user_id%> <%=post.user[:last_name]%></p>
-            <p><%=post.timestamp%></p>
+            <p>Author: <%=post.user[:username]%></p>
+            <p>Created: <%=post.created_at%> | Updated: <%=post.updated_at%></p>
             <p class="text"><%=post.content%></p>
             <p><a class="btn btn-primary" href="#" role="button">View Comments &raquo;</a></p>
               <%end%>

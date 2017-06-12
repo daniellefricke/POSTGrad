@@ -2,15 +2,12 @@
 
 <%= form_for [@school, @post] do |f|%>
 
-  <%=f.label :name %>
-  <%=f.text_field :author %>
-
-  <%=f.label :title %>
-  <%=f.text_field :title %>
-
-  <%=f.label :content %>
-  <%=f.text_field :content %>
-
+  <%=f.label :post_title %><br>
+  <%=f.text_area :title, size: "50x1" %>
+<div class="container">
+  <%=f.label :content %><br>
+  <%=f.text_area :content, size: "50x10" %>
+</div>
   <%= f.submit "Create"%>
 <%end%>
 

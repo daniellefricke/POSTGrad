@@ -22,9 +22,9 @@ xavier = School.create(name:"Xavier", city: "Cincinnati", state: "Ohio", url: "w
 
 
 
-
-theshoe = Post.create(title:"Football Saturday", author: "Urban Meyer", content: "Ohio State football is the best and that's all there is to it.", school: osu)
-theosu = Post.create(title: "The", author: "Danielle Fricke", content: "Yes, we use 'The' because we are the first to use it!", school: osu)
-
-original = Comment.create(commentor:"Woody Hayes", text: "I invented 'The'.", post: theshoe)
-original2 = Comment.create(commentor:"Archie Griffin", text: "Coach is awesome!", post: theosu)
+#
+# theshoe = Post.create(title:"Football Saturday", author: "Urban Meyer", content: "Ohio State football is the best and that's all there is to it.", school: osu)
+# theosu = Post.create(title: "The", author: "Danielle Fricke", content: "Yes, we use 'The' because we are the first to use it!", school: osu)
+#
+# original = Comment.create(commentor:"Woody Hayes", text: "I invented 'The'.", post: theshoe)
+# original2 = Comment.create(commentor:"Archie Griffin", text: "Coach is awesome!", post: theosu)

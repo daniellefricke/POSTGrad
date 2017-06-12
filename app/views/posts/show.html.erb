@@ -1,5 +1,7 @@
 <h1><%= @post.title %></h1>
-<h2>Author: <%=@post.author%></h2>
+<h3>Author: <%=@post.user[:username]%></h3>
+<p>Created: <%=@post.created_at%> | Updated: <%=@post.updated_at%></p>
+
 <h3><%=@post.content%></h3>
 
 
@@ -13,7 +15,7 @@
       <div class="comments">
           <div class="well">
               <div class="commentor">
-                <p> <%=comment.commentor%></p>
+
               </div>
                 <p><%=comment.text%>
           </div>
