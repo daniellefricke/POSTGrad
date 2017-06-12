@@ -6,14 +6,16 @@
 </div>
 
 <p><%= link_to "Add a Post!", new_school_post_path(@school)%>
-
-<div class="row">
-  <div class="col-lg-4">
-    <% @school.posts.each do |post| %>
-        <h2><%=link_to post.title, school_post_path(@school, post) %></h2>
-        <p><%=post.content%>
-        <p><a class="btn btn-primary" href="#" role="button">View Comments &raquo;</a></p>
-        <%end%>
-      </div>
+<div class="container">
+  <div class="row">
+          <div class="col-lg-4">
+            <% @school.posts.each do |post| %>
+            <h2 class="post-titl"><%=link_to post.title, school_post_path(@school, post) %></h2>
+            <p>Author: <%=post.user_id%> <%=post.user[:last_name]%></p>
+            <p><%=post.timestamp%></p>
+            <p class="text"><%=post.content%></p>
+            <p><a class="btn btn-primary" href="#" role="button">View Comments &raquo;</a></p>
+              <%end%>
+          </div>
+        </div>
 </div>
-  <!-- Example row of columns -->

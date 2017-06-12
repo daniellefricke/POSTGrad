@@ -1,25 +1,19 @@
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container">
-
    <div class="jumbotron">
      <div class="container">
        <div class="schoolindex">
-
-
-       <h1>POSTGRAD</h1>
-       <h3>The Alumni Connection</h3>
-       <p>Have an extra ticket to the game? Looking for information on a local alumni chapter? Want to network with graduates from your major? POSTGrad is here to help you connect with alumni from your college or university.</p>
-             <select onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
-               <option>Select A College/University</option>
-                 <% @schools.each do |school| %>
-               <option value="<%= school_path(school) %>"><%= school.name %></option>
-                 <% end %>
-             </select>
-             </div>
+         <h1>POSTGRAD</h1>
+         <h3>The Alumni Connection</h3>
+         <p>Have an extra ticket to the game? Looking for information on a local alumni chapter? Want to network with graduates from your major? POSTGrad is here to help you connect with alumni from your Alma Mater.</p>
+               <select onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
+                 <option>Select A College/University</option>
+                   <% @schools.each do |school| %>
+                 <option value="<%= school_path(school) %>"><%= school.name %></option>
+                   <% end %>
+               </select>
+         </div>
      </div>
    </div>
-    <div class="featured">
-      <h2>Featured Schools</h2>
-    </div>
 </div>
