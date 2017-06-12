@@ -15,8 +15,9 @@
       <div class="comments">
           <div class="well">
               <div class="commentor">
-
+                  <p>Commentor: <%=comment.user[:username]%></p>
               </div>
+                  <p>Created: <%=comment.created_at%> | Updated: <%=comment.updated_at%></p>
                 <p><%=comment.text%>
           </div>
         <%end%>

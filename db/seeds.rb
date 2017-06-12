@@ -18,11 +18,6 @@ penn_state = School.create(name:"Penn State University", city: "State colleg", s
 virginia_tech = Svirginia_tech = School.create(name:"Virginia Tech", city: "Blacksburg", state: "Virginia", url: "www.vt.edu", img_url: "https://www.branding.unirel.vt.edu/content/branding_unirel_vt_edu/en/trademarks/index/_jcr_content/content/vtmulticolumn/vt-items_1/adaptiveimage.img.640.low.jpg/1461257556919.jpg")
 xavier = School.create(name:"Xavier", city: "Cincinnati", state: "Ohio", url: "www.xavier.edu", img_url: "http://logonoid.com/images/xavier-university-logo.png")
 
-
-
-
-
-#
 # theshoe = Post.create(title:"Football Saturday", author: "Urban Meyer", content: "Ohio State football is the best and that's all there is to it.", school: osu)
 # theosu = Post.create(title: "The", author: "Danielle Fricke", content: "Yes, we use 'The' because we are the first to use it!", school: osu)
 #
