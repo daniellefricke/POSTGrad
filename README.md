@@ -1,4 +1,6 @@
-# README
+# README POSTGrad
+
+POSTGrad is a database of message boards for alumni of universities and colleges in the United States. 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

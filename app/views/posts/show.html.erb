@@ -5,7 +5,7 @@
 
      <p><%= link_to "Edit this Post", edit_school_post_path(@school, @post)%></p>
      <p><%= link_to "Comment on This Post", new_school_post_comment_path(@school, @post, @comment)%></p>
- 
+
 
 <h3>Comments</h3>
 <div class="container">
@@ -13,7 +13,7 @@
       <div class="comments">
           <div class="well">
               <div class="commentor">
-                <p><span class="glyphicon glyphicon-user">  <%=comment.commentor%></span></p>
+                <p> <%=comment.commentor%></p>
               </div>
                 <p><%=comment.text%>
           </div>

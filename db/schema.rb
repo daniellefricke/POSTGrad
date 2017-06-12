@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170610164305) do
     t.string "state"
     t.string "url"
     t.string "img_url"
+    t.string "mascot"
   end
 
   create_table "users", force: :cascade do |t|

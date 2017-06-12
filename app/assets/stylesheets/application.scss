@@ -11,8 +11,11 @@
  * It is generally better to create a new file per style scope.
 
  */
+
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
 
  nav{
    text-align: left;
@@ -23,10 +26,11 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
 }
-.hero{
-  background-image: url("quad.jpg");
 
+p{
+  color: black;
 }
+
 .school {
   display: inline-block;
 }
@@ -36,8 +40,54 @@ body {
   width: 200px;
 }
 
+.row h2{
+  color: rgba(54, 69, 79, 0);
+  font-family: Arial, sans-serif;
+}
 .well {
   width: 50%;
   display: inline-block;
   text-align: left;
+}
+
+.navbar-fixed-top{
+  background-color: rgba(54, 69, 79, 1);
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-image: url('thompson4.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.jumbotron h1,
+.jumbotron .h1 {
+  color: white;
+  font-family: 'Graduate', cursive;
+}
+
+.jumbotron h3{
+  color: white;
+  text-decoration: underline;
+}
+
+.jumbotron img{
+  height: 200px;
+}
+
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+  color: white;
+}
+
+.schoolindex {
+  background-color: rgba(54, 69, 79, .5);
+  padding: 10px;
+  border-radius: 10px;
 }

@@ -6,6 +6,7 @@ class CreateSchools < ActiveRecord::Migration[5.1]
       t.string :state
       t.string :url
       t.string :img_url
+      t.string :mascot
 
     end
   end
