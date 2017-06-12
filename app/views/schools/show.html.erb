@@ -1,7 +1,9 @@
 <div class="container">
     <div class="jumbotron">
         <h1><%= @school.name %></h1>
+        <h3>Home of the <%=@school.mascot%></h3>
             <img><%=image_tag (@school.img_url)%></img>
+        <p>School Webpage: <%=link_to @school.url%></p>
     </div>
 </div>
 
