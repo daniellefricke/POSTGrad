@@ -29,3 +29,11 @@ require 'csv'
 CSV.foreach('Accreditation_04_2017.csv', :headers => true) do |row|
   School.create!(row.to_hash)
 end
+
+# require 'csv'
+#
+# csv_text = File.read('Accreditation_04_2017.csv')
+# csv = CSV.parse(csv_text, :headers => true)
+# csv.each do |row|
+#   School.create!(row.to_hash)
+# end
