@@ -26,14 +26,15 @@ Comment.destroy_all
 
 require 'csv'
 
-CSV.foreach('Accreditation_04_2017.csv', :headers => true) do |row|
+CSV.foreach('Accreditation_04_2017.csv', :headers => true, :header_converters => :symbol) do |row|
   School.create!(row.to_hash)
 end
 
 # require 'csv'
 #
 # csv_text = File.read('Accreditation_04_2017.csv')
-# csv = CSV.parse(csv_text, :headers => true)
-# csv.each do |row|
-#   School.create!(row.to_hash)
-# end
+# csv = CSV.parse(csv_text, :headers => true, :header_converters => :symbol)
+# puts csv[0].to_hash
+# # csv.each do |row|
+# #   School.create!(row.to_hash)
+# # end

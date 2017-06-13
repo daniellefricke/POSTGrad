@@ -25,13 +25,18 @@ before_action :authenticate_user!, except: [:index, :show]
   def edit
     @school = School.find(params[:school_id])
     @post = Post.find(params[:id])
+
   end
+
 
   def update
     @school = School.find(params[:school_id])
     @post = Post.find(params[:id])
-
-    @post.update(post_params)
+        if @post.user == current_user
+          @post.update(post_params)
+        else
+          flash[:alert] = "Only the author of the post can edit/delete"
+        end
         redirect_to school_post_path(@school, @post)
   end
 
