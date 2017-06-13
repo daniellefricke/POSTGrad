@@ -3,6 +3,7 @@
   <div class="postshow">
       <h1><%= @post.title %></h1>
       <h3>Creator: <%=@post.user[:username]%></h3>
+      <p><%= link_to "Edit this Post", edit_school_post_path(@school, @post)%></p>
       <p> Created <%=time_ago_in_words(@post.created_at)%> ago</p>
 
     <div class="container_post">
@@ -11,12 +12,10 @@
   </div>
 </div>
 
-<div class="container">
-    <p><%= link_to "Edit this Post", edit_school_post_path(@school, @post)%></p>
-    <p><%= link_to "Comment on This Post", new_school_post_comment_path(@school, @post, @comment)%></p>
-</div>
+  <hr class="featurette-divider">
 
 <h3>Comments</h3>
+<p><%= link_to "Comment on This Post", new_school_post_comment_path(@school, @post, @comment)%></p>
   <div class="container">
     <% @post.comments.each do |comment| %>
         <div class="comments">
