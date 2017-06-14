@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     @school = School.find(params[:school_id])
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create!(comment_params.merge(user: current_user))
-
+    flash[:notice] = "Your comment has been added to this post."
     redirect_to school_post_path(@school, @post)
   end
 

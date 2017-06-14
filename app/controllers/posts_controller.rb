@@ -45,6 +45,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @post =  Post.find(params[:id])
     if @post.user == current_user
        @post.destroy
+       flash[:alert] = "You post was deleted successfully!"
     else
       flash[:alert] = "Only the author of this post can delete."
     end
