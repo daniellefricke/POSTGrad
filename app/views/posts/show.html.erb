@@ -3,7 +3,10 @@
   <div class="postshow">
       <h1><%= @post.title %></h1>
       <h3>Creator: <%=@post.user[:username]%></h3>
+      <%if @post.user == current_user%>
       <p><%= link_to "Edit this Post", edit_school_post_path(@school, @post)%></p>
+      <%else%>
+      <%end%>
       <p> Created <%=time_ago_in_words(@post.created_at)%> ago</p>
 
     <div class="container_post">
@@ -28,3 +31,5 @@
     <%end%>
     </div>
 </div>
+
+<hr class="featurette-divider">

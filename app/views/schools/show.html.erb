@@ -6,19 +6,24 @@
     </div>
 </div>
 
-  <hr class="featurette-divider">
-<p><%= link_to "Add a Post!", new_school_post_path(@school)%></p>
-  <hr class="featurette-divider">
+<hr class="featurette-divider">
+    <p><%= link_to "Add a Post!", new_school_post_path(@school)%></p>
+<hr class="featurette-divider">
+
 <div class="container">
-  <div class="row">
-          <div class="col-lg-4">
-            <% @school.posts.order(created_at: :DESC).each do |post| %>
-            <h2><%=link_to post.title, school_post_path(@school, post) %></h2>
-              <p>Author: <%=post.user[:username]%> | Created <%=time_ago_in_words(post.created_at)%> ago</p>
-                  <p class="text"><%=post.content%></p>
-                    <a href="/schools/<%=@school.id%>/posts/<%=post.id%>"><p class="btn btn-primary" role="button">View Comments &raquo;</p></a>
-            <%end%>
-          </div>
-            <hr class="featurette-divider">
-        </div>
+  <% @school.posts.order(created_at: :DESC).each do |post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2 class="panel-title"><%=link_to post.title, school_post_path(@school, post) %></h2>
+        <p>Author: <%=post.user[:username]%> | Created <%=time_ago_in_words(post.created_at)%> ago</p>
+      </div>
+    <div class="panel-body">
+      <p class="text"><%=post.content%></p>
+    </div>
+  </div>
+    <a href="/schools/<%=@school.id%>/posts/<%=post.id%>"><p class="btn btn-primary" role="button">View Comments &raquo;</p></a>
+    <%end%>
+  </div>
 </div>
+
+<hr class="featurette-divider">

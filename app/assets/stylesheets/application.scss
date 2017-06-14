@@ -67,11 +67,18 @@ p{
   font-weight: 200;
   color: white;
 }
-
+.row h1{
+  color: red;
+  padding: 10px;
+}
 .img-responsive{
   border-radius: 10px;
 }
 
+.container h1 .logo{
+  font-family: 'Graduate', cursive;
+  color: red;
+}
 .school {
   display: inline-block;
 }
@@ -95,18 +102,67 @@ p{
   background-color: rgba(54, 69, 79, .5);
   padding: 10px;
   border-radius: 10px;
+  margin: 20px;
 }
 
 .text {
   text-align: left;
 }
 
+.col-lg-12 h2 a{
+  text-decoration: none;
+  color: rgba(54, 69, 79, 1);
+}
+
+.col-lg-12 h2 a:hover{
+  text-decoration: none;
+  color: red;
+}
+.container p a{
+  text-decoration: none;
+  color: red;
+}
+
 .btn-primary {
   background-color: rgba(54, 69, 79, 1);
   border: 1px solid red;
+  margin: 5px;
 }
 
 .btn-primary:hover {
   background-color: rgba(0, 0, 0, 1);
   border: 1px solid red;
+}
+
+.col-lg-12 h2 a{
+  text-decoration: none;
+  color: rgba(54, 69, 79, 1);
+}
+
+.col-lg-12 h2 a:hover{
+  text-decoration: none;
+  color: red;
+}
+
+.panel {
+  margin: 10px;
+}
+
+.panel h2 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: red;
+  padding: 5px;
+}
+
+.postwithcare {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  background-color: white;
+  color: red;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 10px;
+  margin: 10px;
 }
