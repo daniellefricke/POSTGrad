@@ -2,27 +2,22 @@
 
 POSTGrad is a database of message boards for alumni of universities and colleges in the United States.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+  'rails', '~> 5.1.1'
 
 * System dependencies
+  requires: postgresql
 
-* Configuration
+* Database dependencies
+  Database data is provided in .CSV file. Working .xls file is also induced for adding/removing schools on the master list.
 
-* Database creation
+#Updates to future versions:
+1. Add more data to user sign up and make a user profile page. This way, when a user posts or comments, their username is linked to more information about them. Specifically location, school attended, major, graduation year, photo, and LinkedIn information. You could also see posts that users 'favorite' and a history of posts they make.
 
-* Database initialization
+2. Add level of authorization that only allows grads of a school to post to their message boards. This helps with discouraging trolling and promotes the site as more of a credible app.
 
-* How to run the test suite
+3. Create 'local chapter' pages for schools. Each school will have a state search option so that you can find people in the same state as you from your university and have a 'local chapter' message board. i.e. I went to Ohio State and live in D.C.. I can find and post with OSU alumni around me.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. Create authorization and model for schools to create an manage a school user page. They could maintain the page as they would an alumni website on their university page.
 
 jumbotron img credit: https://www.flickr.com/photos/brandonkopp/7161470563/in/photolist-bUQpGp-o3jLHq-iLC3tt-zxfa4-8kH6rH-Gc9gre-U3YJhC-U3YMHf-e59thQ-Gqnt2E-8kLgdQ-6RT9bB-pP8ezA-zxfah-aGCLXv-iPHPXP-ovZKoT-dJ4AKj-TaCgom-2arASY-8kLgK9-6P3i81-ovEg3n-e28KbG-dRBiE8-hQjaaV-8kLg8A-zxfap-9NWTN2-6RX8SL-AXBsoJ-81UPUZ-8kH6hK-8kH6aH-8kLgtN-6o6tzF-8kLgAS-ci6yQC-8kH5Sc-oPXdks-aGCMUX-76cYdH-8juxLp-8kLh11-7dC4wW-5Fo7Ht-zxfae-76gSjs-8kLgn7-8kH6yZ
