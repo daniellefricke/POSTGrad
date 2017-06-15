@@ -1,6 +1,6 @@
 # README POSTGrad
 
-POSTGrad is a database of message boards for alumni of universities and colleges in the United States.
+POSTGrad is a web app of message boards for alumni of universities and colleges in the United States. 'Centralizing' the alumni community would be a way to boost alumni interactions, activities, and involvement, especially for those who leave the community where their school is located.
 
 * Ruby version
   'rails', '~> 5.1.1'
@@ -11,7 +11,17 @@ POSTGrad is a database of message boards for alumni of universities and colleges
 * Database dependencies
   Database data is provided in .CSV file. Working .xls file is also induced for adding/removing schools on the master list.
 
-#Updates to future versions:
+* Project requirements
+  -Be built in Rails
+  -Have its own repository on your GitHub account (do not fork this repo)
+  -Have at least 2 non-User models with at least 1 association
+  -Have complete RESTful routes for at least one of your resources
+  -Have error handling, validations, and flash messages for all modified and created resources
+  -Utilize an ORM (such as Active Record) and migrations to create a database table structure and interact with your stored relational data
+  -Have your application deployed on Heroku
+  -Have semantically-clean HTML and CSS that passes the standard validators
+
+##Updates to future versions:
 1. Add more data to user sign up and make a user profile page. This way, when a user posts or comments, their username is linked to more information about them. Specifically location, school attended, major, graduation year, photo, and LinkedIn information. You could also see posts that users 'favorite' and a history of posts they make.
 
 2. Add level of authorization that only allows grads of a school to post to their message boards. This helps with discouraging trolling and promotes the site as more of a credible app.
