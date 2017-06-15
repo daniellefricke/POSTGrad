@@ -8,6 +8,9 @@
 
 <hr class="featurette-divider">
     <p><%= link_to "Add a Post!", new_school_post_path(@school)%></p>
+      <% flash.each do |type, message| %>
+        <p> <%= message %></p>
+          <% end %>
 <hr class="featurette-divider">
 
 <div class="container">

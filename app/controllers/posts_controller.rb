@@ -14,7 +14,8 @@ before_action :authenticate_user!, except: [:index, :show]
     @school = School.find(params[:school_id])
     @post = @school.posts.create!(post_params.merge(user: current_user))
 
-    redirect_to school_path(@school, @posts)
+    redirect_to school_path(@school, @posts), notice: "Your post was created!"
+
   end
 
   def show
@@ -34,10 +35,11 @@ before_action :authenticate_user!, except: [:index, :show]
     @post = Post.find(params[:id])
         if @post.user == current_user
           @post.update(post_params)
+
         else
           flash[:alert] = "Only the author of the post can edit/delete"
         end
-        redirect_to school_post_path(@school, @post)
+        redirect_to school_post_path(@school, @post), notice: "Your post was updated!"
   end
 
   def destroy
